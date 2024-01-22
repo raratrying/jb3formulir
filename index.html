@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Event</title>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(#ca6f91, #f0884b);
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 60px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%; 
+            margin-left: 360px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background: #dd766d;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Pendaftaran Event Kigyo Matsuri</h2>
+    <form action="proses.php" method="post" >
+        <label for="nama">Real Name:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="nama">Stage Name:</label>
+        <input type="text" id="namapanggung" name="namapanggung" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required>
+
+        <label for="metode_pembayaran">Metode Pembayaran:</label>
+        <select id="metode_pembayaran" name="metode_pembayaran" required>
+            <option value="transfer_bank">Transfer Bank</option>
+            <option value="pulsa">Pembayaran via Pulsa</option>
+            <option value="ewallet">e-Wallet\ (Spay, Dana, OVO)</option>
+        </select>
+
+        <input type="submit" value="Daftar">
+    </form>
+
+</body>
+</html>
